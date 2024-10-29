@@ -35,53 +35,84 @@
 
                        
                     </ul>
+                    
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i data-feather="users"></i>
-                        <span data-key="t-authentication">Authentication</span>
+                        <i data-feather="grid"></i>
+                        <span data-key="t-apps">Product</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="auth-login.html" data-key="t-login">Login</a></li>
-                        <li><a href="auth-register.html" data-key="t-register">Register</a></li>
+                        <li>
+                            <a href="{{route('add.product')}}">
+                                <span data-key="t-calendar">Add Product</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('all.product')}}">
+                                <span data-key="t-calendar">All Product</span>
+                            </a>
+                        </li>
+
                        
                     </ul>
+                    
                 </li>
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i data-feather="file-text"></i>
-                        <span data-key="t-pages">Pages</span>
+                        <i data-feather="grid"></i>
+                        <span data-key="t-apps">Gallery</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="pages-starter.html" data-key="t-starter-page">Starter Page</a></li>
-                        <li><a href="pages-maintenance.html" data-key="t-maintenance">Maintenance</a></li>
+                        <li>
+                            <a href="{{route('add.gallery')}}">
+                                <span data-key="t-calendar">Add Gallery</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('all.gallery')}}">
+                                <span data-key="t-calendar">All Gallery</span>
+                            </a>
+                        </li>
+
                        
                     </ul>
+                    
                 </li>
-
-                <li>
-                    <a href="layouts-horizontal.html">
-                        <i data-feather="layout"></i>
-                        <span data-key="t-horizontal">Horizontal</span>
-                    </a>
-                </li>
-
-                <li class="menu-title mt-2" data-key="t-components">Elements</li>
 
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
-                        <i data-feather="map"></i>
-                        <span data-key="t-maps">Maps</span>
+                        <i data-feather="grid"></i>
+                        <span data-key="t-apps">Coupon</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="maps-google.html" data-key="t-g-maps">Google</a></li>
-                        <li><a href="maps-vector.html" data-key="t-v-maps">Vector</a></li>
-                        <li><a href="maps-leaflet.html" data-key="t-l-maps">Leaflet</a></li>
+                        <li>
+                            <a href="{{route('add.gallery')}}">
+                                <span data-key="t-calendar">Add Coupon</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('all.coupon')}}">
+                                <span data-key="t-calendar">All Coupon</span>
+                            </a>
+                        </li>
+
+                       
                     </ul>
+                    
                 </li>
+
+
+                
+
+
 
                 
 

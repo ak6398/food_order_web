@@ -75,6 +75,37 @@
                                     <label for="example-text-input" class="form-label">Email</label>
                                     <input class="form-control" name="email" type="email" value="{{$profileData->email}}" id="example-text-input">
                                 </div>
+
+                                <div class=" mb-3">
+                                    <label for="example-text-input" class="form-label">City Name</label>
+                                    <select class="form-select" name="city_id">
+                                        <option>Select</option>
+                                        @foreach ($city as $cit)
+                                        <option value="{{$cit->id}}" {{$cit->id==$profileData->city_id ? 'selected':''}}>{{$cit->city_name}}</option>  
+                                        @endforeach
+                                        
+                                    </select>
+                                </div>
+
+
+                                
+                                   
+                                    <div class="mb-3">
+                                        <label for="example-text-input" class="form-label">Restaurant Info</label>
+                                        <textarea name="shop_info" id="basicpill-address-input" class="form-control" rows="2" placeholder="Enter your Address"></textarea>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="example-text-input" class="form-label">Cover Photo</label>
+                                        <input class="form-control" name="cover_photo" type="file"  id="image">
+                                    </div>
+
+                                    <div class="mb-3">
+                                    
+                                        <img id="show_image" src="{{!empty($profileData->cover_photo)?url('upload/client_images/'.$profileData->cover_photo):url('upload/no_image.jpg')}}" alt="" class=" p-1 bg-primary" width="210" height="110">
+                                    </div>
+                               
                         
                                 
                             </div>
