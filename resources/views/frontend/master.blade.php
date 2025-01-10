@@ -4,6 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="csrf-token" content="{{ csrf_token() }}">
       <meta name="description" content="Askbootstrap">
       <meta name="author" content="Askbootstrap">
       <title>Osahan Eat - Online Food Ordering Website HTML Template</title>
@@ -70,5 +71,12 @@
       <script src="{{asset('frontend/vendor/owl-carousel/owl.carousel.js')}}"></script>
       <!-- Custom scripts for all pages-->
       <script src="{{asset('frontend/js/custom.js')}}"></script>
+      <script type="text/javascript">
+         $.ajaxSetup({
+            headers:{
+               'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+            }
+         });
+        </script>
    </body>
 </html>

@@ -7,6 +7,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Client\RestaurantController;
 use App\Http\Controllers\Client\CouponController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ManageController;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\Cartcontroller;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -83,6 +86,22 @@ Route::middleware('admin')->group(function(){
         Route::get('/delete/city/{id}','DeleteCity')->name('delete.city');
         Route::get('/delete/category/{id}','DeleteCategory')->name('delete.category');
     });
+
+    Route::controller(ManageController::class)->group(function(){
+        Route::get('/admin/all/product','AdminAllProduct')->name('adm_all.product');
+        // Route::get('/add/product', 'AddProduct')->name('add.product');
+        // Route::post('/store/product', 'StoreProduct')->name('product.store');
+        // Route::get('/edit/product/{id}', 'EditProduct')->name('edit.product');
+        // Route::post('/update/product', 'UpdateProduct')->name('product.update');
+        // Route::get('/delete/product/{id}', 'Deleteproduct')->name('delete.product');
+        // Route::get('/changeStatus', 'changeStatus');
+    });
+
+    Route::controller(ManageController::class)->group(function(){
+        Route::get('/all/banner','AllBanner')->name('all.banner');
+        Route::post('/banner/store','BannerStore')->name('banner.store');
+        
+    });
    
 
 });
@@ -128,10 +147,21 @@ Route::middleware('client')->group(function(){
         Route::get('/all/coupon','AllCoupon')->name('all.coupon');
         Route::get('/add/coupon', 'AddCoupon')->name('add.coupon');
         Route::post('/store/coupon', 'StoreCoupon')->name('coupon.store');
-        // Route::get('/edit/gallery/{id}', 'EditGallery')->name('edit.gallery');
-        // Route::post('/update/gallery', 'UpdateGallery')->name('gallery.update');
-        // Route::get('/delete/gallery/{id}', 'DeleteGallery')->name('delete.gallery');
+        Route::get('/edit/coupon/{id}', 'EditCoupon')->name('edit.coupon');
+        Route::post('/update/coupon', 'UpdateCoupon')->name('coupon.update');
+        Route::get('/delete/coupon/{id}', 'DeleteCoupon')->name('delete.coupon');
         
     });
+    
+});
+
+
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/restaurant/detail/{id}','RestaurantDetails')->name('res.details');
+    
+});
+
+Route::controller(Cartcontroller::class)->group(function(){
+    Route::get('/add_to_cart/{id}','AddToCart')->name('add_to_cart');
     
 });

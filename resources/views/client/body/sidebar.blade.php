@@ -93,7 +93,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{route('add.gallery')}}">
+                            <a href="{{route('add.coupon')}}">
                                 <span data-key="t-calendar">Add Coupon</span>
                             </a>
                         </li>

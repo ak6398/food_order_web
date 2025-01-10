@@ -49,25 +49,28 @@
                     </ul>
                 </li>
 
+            
                 <li>
-                    <a href="layouts-horizontal.html">
-                        <i data-feather="layout"></i>
-                        <span data-key="t-horizontal">Horizontal</span>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i data-feather="map"></i>
+                        <span data-key="t-maps">Manage Product</span>
                     </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('adm_all.product')}}" data-key="t-g-maps">All Product</a></li>
+                        <li><a href="#" data-key="t-v-maps">Add Product</a></li>
+                        
+                    </ul>
                 </li>
-
-                <li class="menu-title mt-2" data-key="t-components">Elements</li>
-
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="map"></i>
-                        <span data-key="t-maps">Maps</span>
+                        <span data-key="t-maps">Manage Banner</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="maps-google.html" data-key="t-g-maps">Google</a></li>
-                        <li><a href="maps-vector.html" data-key="t-v-maps">Vector</a></li>
-                        <li><a href="maps-leaflet.html" data-key="t-l-maps">Leaflet</a></li>
+                        <li><a href="{{route('all.banner')}}" data-key="t-g-maps">All Banner</a></li>
+                        
+                        
                     </ul>
                 </li>
 

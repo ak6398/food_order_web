@@ -52,11 +52,17 @@
                                     <td>{{$item->coupon_name}}</td>
                                     <td>{{$item->coupon_desc}}</td>
                                     <td>{{$item->discount}}</td>
-                                    <td>{{$item->validity}}</td>
-                                    <td>{{$item->status}}</td>
+                                    <td>{{ Carbon\Carbon::parse($item->validity)->format('D d F Y') }}</td>
                                     <td>
-                                        <a href="{{route('edit.menu',$item->id)}}" class="btn btn-info waves-effect waves-light">Edit</a>
-                                        <a href="{{route('delete.menu',$item->id)}}" class="btn btn-danger waves-effect waves-light" id="delete">Delete</a>
+                                        @if ($item->validity >= Carbon\Carbon::now()->format('Y-m-d'))
+                                            <span class="badege rounded-pill bg-success">Valid</span>
+                                            @else 
+                                            <span class="badege rounded-pill bg-danger">InValid</span>  
+                                        @endif
+                                        </td>
+                                    <td>
+                                        <a href="{{route('edit.coupon',$item->id)}}" class="btn btn-info waves-effect waves-light">Edit</a>
+                                        <a href="{{route('delete.coupon',$item->id)}}" class="btn btn-danger waves-effect waves-light" id="delete">Delete</a>
                                     </td>
                                     
                                 </tr>
